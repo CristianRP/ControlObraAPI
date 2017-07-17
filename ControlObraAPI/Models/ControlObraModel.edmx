@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CFB_BuildModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TIPO_CONSULTA" Type="int" Mode="In" />
+          <Parameter Name="PARAMETRO1" Type="int" Mode="In" />
+          <Parameter Name="PARAMETRO2" Type="int" Mode="In" />
+          <Parameter Name="PARAMETRO3" Type="int" Mode="In" />
+          <Parameter Name="PARAMETRO4" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="CFB_BuildModelStoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CFB_BuildModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="CFB_BuildEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE" ReturnType="Collection(CFB_BuildModel.VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE_Result)">
+            <Parameter Name="TIPO_CONSULTA" Mode="In" Type="Int32" />
+            <Parameter Name="PARAMETRO1" Mode="In" Type="Int32" />
+            <Parameter Name="PARAMETRO2" Mode="In" Type="Int32" />
+            <Parameter Name="PARAMETRO3" Mode="In" Type="Int32" />
+            <Parameter Name="PARAMETRO4" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE_Result">
+          <Property Type="String" Name="CODIGO" Nullable="true" MaxLength="90" />
+          <Property Type="String" Name="NOMBRE" Nullable="false" MaxLength="40" />
+          <Property Type="String" Name="TIPO" Nullable="false" MaxLength="9" />
+          <Property Type="Int32" Name="COD_UNIDAD" Nullable="false" />
+          <Property Type="String" Name="ES_UNIDAD" Nullable="false" MaxLength="3" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CFB_BuildModelStoreContainer" CdmEntityContainer="CFB_BuildEntities" >
+          <FunctionImportMapping FunctionImportName="VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE" FunctionName="CFB_BuildModel.Store.VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CFB_BuildModel.VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE_Result">
+                <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="COD_UNIDAD" ColumnName="COD_UNIDAD" />
+                <ScalarProperty Name="ES_UNIDAD" ColumnName="ES_UNIDAD" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CFB_BuildModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CFB_BuildEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE" ReturnType="Collection(CFB_BuildModel.VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE_Result)">
+      <Parameter Name="TIPO_CONSULTA" Mode="In" Type="Int32" />
+      <Parameter Name="PARAMETRO1" Mode="In" Type="Int32" />
+      <Parameter Name="PARAMETRO2" Mode="In" Type="Int32" />
+      <Parameter Name="PARAMETRO3" Mode="In" Type="Int32" />
+      <Parameter Name="PARAMETRO4" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE_Result">
+    <Property Type="String" Name="CODIGO" Nullable="true" MaxLength="90" />
+    <Property Type="String" Name="NOMBRE" Nullable="false" MaxLength="40" />
+    <Property Type="String" Name="TIPO" Nullable="false" MaxLength="9" />
+    <Property Type="Int32" Name="COD_UNIDAD" Nullable="false" />
+    <Property Type="String" Name="ES_UNIDAD" Nullable="false" MaxLength="3" />
+  </ComplexType>
+</Schema>
