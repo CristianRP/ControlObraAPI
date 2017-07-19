@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="CFB_BuildModelStoreContainer" CdmEntityContainer="CFB_BuildEntities">
-    <FunctionImportMapping FunctionImportName="VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE" FunctionName="CFB_BuildModel.Store.VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE">
+    <FunctionImportMapping FunctionImportName="VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE2" FunctionName="CFB_BuildModel.Store.VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="CFB_BuildModel.VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE_Result">
+        <ComplexTypeMapping TypeName="CFB_BuildModel.VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE2_Result">
           <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
           <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
           <ScalarProperty Name="TIPO" ColumnName="TIPO" />
           <ScalarProperty Name="COD_UNIDAD" ColumnName="COD_UNIDAD" />
           <ScalarProperty Name="ES_UNIDAD" ColumnName="ES_UNIDAD" />

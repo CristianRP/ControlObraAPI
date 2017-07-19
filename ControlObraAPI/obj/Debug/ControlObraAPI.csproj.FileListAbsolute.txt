@@ -97,3 +97,4 @@ F:\Rosul\WEB-API\ControlObraAPI\ControlObraAPI\bin\es\Microsoft.Owin.Security.Mi
 F:\Rosul\WEB-API\ControlObraAPI\ControlObraAPI\bin\es\System.Web.Http.Owin.resources.dll
 F:\Rosul\WEB-API\ControlObraAPI\ControlObraAPI\obj\Debug\ControlObraAPI.dll
 F:\Rosul\WEB-API\ControlObraAPI\ControlObraAPI\obj\Debug\ControlObraAPI.pdb
+F:\Rosul\WEB-API\ControlObraAPI\ControlObraAPI\obj\Debug\ControlObraAPI.csprojResolveAssemblyReference.cache
