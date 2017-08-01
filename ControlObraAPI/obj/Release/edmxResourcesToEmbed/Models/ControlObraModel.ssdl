@@ -1,5 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="CFB_BuildModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="INSERT_PREREQ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="COD_PROYECTO" Type="int" Mode="In" />
+    <Parameter Name="COD_MODELO" Type="int" Mode="In" />
+    <Parameter Name="COD_LOTE" Type="int" Mode="In" />
+    <Parameter Name="COD_ACTIVIDAD" Type="int" Mode="In" />
+    <Parameter Name="COD_TAREA" Type="int" Mode="In" />
+    <Parameter Name="COD_DETALLE" Type="int" Mode="In" />
+    <Parameter Name="CANTIDAD" Type="numeric" Mode="In" />
+    <Parameter Name="COD_UNIDAD" Type="int" Mode="In" />
+    <Parameter Name="ES_UNIDAD" Type="nvarchar" Mode="In" />
+    <Parameter Name="SOLICITADO" Type="numeric" Mode="In" />
+    <Parameter Name="DESPACHO" Type="numeric" Mode="In" />
+    <Parameter Name="BODEGA" Type="numeric" Mode="In" />
+    <Parameter Name="INCLUIR" Type="char" Mode="In" />
+    <Parameter Name="NUMERO" Type="int" Mode="In" />
+    <Parameter Name="USUARIO" Type="int" Mode="In" />
+    <Parameter Name="IDDISPOSITIVO" Type="nvarchar" Mode="In" />
+    <Parameter Name="TIPO" Type="nvarchar" Mode="In" />
+    <Parameter Name="ESTADO" Type="nvarchar" Mode="In" />
+  </Function>
   <Function Name="VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="TIPO_CONSULTA" Type="int" Mode="In" />
     <Parameter Name="PARAMETRO1" Type="int" Mode="In" />

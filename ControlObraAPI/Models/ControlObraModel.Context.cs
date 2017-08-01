@@ -102,5 +102,82 @@ namespace ControlObraAPI.Models
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE2_Result>("VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE2", tIPO_CONSULTAParameter, pARAMETRO1Parameter, pARAMETRO2Parameter, pARAMETRO3Parameter, pARAMETRO4Parameter);
         }
+    
+        public virtual int INSERT_PREREQ(Nullable<int> cOD_PROYECTO, Nullable<int> cOD_MODELO, Nullable<int> cOD_LOTE, Nullable<int> cOD_ACTIVIDAD, Nullable<int> cOD_TAREA, Nullable<int> cOD_DETALLE, Nullable<decimal> cANTIDAD, Nullable<int> cOD_UNIDAD, string eS_UNIDAD, Nullable<decimal> sOLICITADO, Nullable<decimal> dESPACHO, Nullable<decimal> bODEGA, string iNCLUIR, Nullable<int> nUMERO, Nullable<int> uSUARIO, string iDDISPOSITIVO, string tIPO, string eSTADO)
+        {
+            var cOD_PROYECTOParameter = cOD_PROYECTO.HasValue ?
+                new ObjectParameter("COD_PROYECTO", cOD_PROYECTO) :
+                new ObjectParameter("COD_PROYECTO", typeof(int));
+    
+            var cOD_MODELOParameter = cOD_MODELO.HasValue ?
+                new ObjectParameter("COD_MODELO", cOD_MODELO) :
+                new ObjectParameter("COD_MODELO", typeof(int));
+    
+            var cOD_LOTEParameter = cOD_LOTE.HasValue ?
+                new ObjectParameter("COD_LOTE", cOD_LOTE) :
+                new ObjectParameter("COD_LOTE", typeof(int));
+    
+            var cOD_ACTIVIDADParameter = cOD_ACTIVIDAD.HasValue ?
+                new ObjectParameter("COD_ACTIVIDAD", cOD_ACTIVIDAD) :
+                new ObjectParameter("COD_ACTIVIDAD", typeof(int));
+    
+            var cOD_TAREAParameter = cOD_TAREA.HasValue ?
+                new ObjectParameter("COD_TAREA", cOD_TAREA) :
+                new ObjectParameter("COD_TAREA", typeof(int));
+    
+            var cOD_DETALLEParameter = cOD_DETALLE.HasValue ?
+                new ObjectParameter("COD_DETALLE", cOD_DETALLE) :
+                new ObjectParameter("COD_DETALLE", typeof(int));
+    
+            var cANTIDADParameter = cANTIDAD.HasValue ?
+                new ObjectParameter("CANTIDAD", cANTIDAD) :
+                new ObjectParameter("CANTIDAD", typeof(decimal));
+    
+            var cOD_UNIDADParameter = cOD_UNIDAD.HasValue ?
+                new ObjectParameter("COD_UNIDAD", cOD_UNIDAD) :
+                new ObjectParameter("COD_UNIDAD", typeof(int));
+    
+            var eS_UNIDADParameter = eS_UNIDAD != null ?
+                new ObjectParameter("ES_UNIDAD", eS_UNIDAD) :
+                new ObjectParameter("ES_UNIDAD", typeof(string));
+    
+            var sOLICITADOParameter = sOLICITADO.HasValue ?
+                new ObjectParameter("SOLICITADO", sOLICITADO) :
+                new ObjectParameter("SOLICITADO", typeof(decimal));
+    
+            var dESPACHOParameter = dESPACHO.HasValue ?
+                new ObjectParameter("DESPACHO", dESPACHO) :
+                new ObjectParameter("DESPACHO", typeof(decimal));
+    
+            var bODEGAParameter = bODEGA.HasValue ?
+                new ObjectParameter("BODEGA", bODEGA) :
+                new ObjectParameter("BODEGA", typeof(decimal));
+    
+            var iNCLUIRParameter = iNCLUIR != null ?
+                new ObjectParameter("INCLUIR", iNCLUIR) :
+                new ObjectParameter("INCLUIR", typeof(string));
+    
+            var nUMEROParameter = nUMERO.HasValue ?
+                new ObjectParameter("NUMERO", nUMERO) :
+                new ObjectParameter("NUMERO", typeof(int));
+    
+            var uSUARIOParameter = uSUARIO.HasValue ?
+                new ObjectParameter("USUARIO", uSUARIO) :
+                new ObjectParameter("USUARIO", typeof(int));
+    
+            var iDDISPOSITIVOParameter = iDDISPOSITIVO != null ?
+                new ObjectParameter("IDDISPOSITIVO", iDDISPOSITIVO) :
+                new ObjectParameter("IDDISPOSITIVO", typeof(string));
+    
+            var tIPOParameter = tIPO != null ?
+                new ObjectParameter("TIPO", tIPO) :
+                new ObjectParameter("TIPO", typeof(string));
+    
+            var eSTADOParameter = eSTADO != null ?
+                new ObjectParameter("ESTADO", eSTADO) :
+                new ObjectParameter("ESTADO", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("INSERT_PREREQ", cOD_PROYECTOParameter, cOD_MODELOParameter, cOD_LOTEParameter, cOD_ACTIVIDADParameter, cOD_TAREAParameter, cOD_DETALLEParameter, cANTIDADParameter, cOD_UNIDADParameter, eS_UNIDADParameter, sOLICITADOParameter, dESPACHOParameter, bODEGAParameter, iNCLUIRParameter, nUMEROParameter, uSUARIOParameter, iDDISPOSITIVOParameter, tIPOParameter, eSTADOParameter);
+        }
     }
 }

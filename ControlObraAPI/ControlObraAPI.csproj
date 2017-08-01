@@ -231,6 +231,7 @@
       <DependentUpon>ControlObraModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Requisicion.cs" />
     <Compile Include="Models\VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE1_Result.cs">
       <DependentUpon>ControlObraModel.tt</DependentUpon>
     </Compile>

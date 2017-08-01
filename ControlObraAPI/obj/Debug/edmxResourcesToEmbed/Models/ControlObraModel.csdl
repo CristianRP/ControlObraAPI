@@ -22,6 +22,26 @@
       <Parameter Name="PARAMETRO3" Mode="In" Type="Int32" />
       <Parameter Name="PARAMETRO4" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="INSERT_PREREQ">
+      <Parameter Name="COD_PROYECTO" Mode="In" Type="Int32" />
+      <Parameter Name="COD_MODELO" Mode="In" Type="Int32" />
+      <Parameter Name="COD_LOTE" Mode="In" Type="Int32" />
+      <Parameter Name="COD_ACTIVIDAD" Mode="In" Type="Int32" />
+      <Parameter Name="COD_TAREA" Mode="In" Type="Int32" />
+      <Parameter Name="COD_DETALLE" Mode="In" Type="Int32" />
+      <Parameter Name="CANTIDAD" Mode="In" Type="Decimal" />
+      <Parameter Name="COD_UNIDAD" Mode="In" Type="Int32" />
+      <Parameter Name="ES_UNIDAD" Mode="In" Type="String" />
+      <Parameter Name="SOLICITADO" Mode="In" Type="Decimal" />
+      <Parameter Name="DESPACHO" Mode="In" Type="Decimal" />
+      <Parameter Name="BODEGA" Mode="In" Type="Decimal" />
+      <Parameter Name="INCLUIR" Mode="In" Type="String" />
+      <Parameter Name="NUMERO" Mode="In" Type="Int32" />
+      <Parameter Name="USUARIO" Mode="In" Type="Int32" />
+      <Parameter Name="IDDISPOSITIVO" Mode="In" Type="String" />
+      <Parameter Name="TIPO" Mode="In" Type="String" />
+      <Parameter Name="ESTADO" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE_Result">
     <Property Type="String" Name="CODIGO" Nullable="true" MaxLength="90" />

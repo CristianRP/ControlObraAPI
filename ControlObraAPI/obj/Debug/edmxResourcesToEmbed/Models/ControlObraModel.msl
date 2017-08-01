@@ -13,5 +13,6 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="INSERT_PREREQ" FunctionName="CFB_BuildModel.Store.INSERT_PREREQ" />
   </EntityContainerMapping>
 </Mapping>

@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace ControlObraAPI.Controllers
 {
@@ -56,15 +58,28 @@ namespace ControlObraAPI.Controllers
             return db.VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE2(tipoConsulta, parametro, parametro1, parametro2, parametro3).AsEnumerable();
         }
 
+        // POST: api/
+
         // GET: api/GeneralViewFilter/5
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST: api/GeneralViewFilter
-        public void Post([FromBody]string value)
+        // POST: api/Requisicion
+        [ResponseType(typeof(Requisicion))]
+        [Route("api/Requisicion")]
+        public async Task<IHttpActionResult> RequisicionPost(Requisicion req)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            db.INSERT_PREREQ(req.CodProyecto, req.CodModelo, req.CodLote, req.CodActividad, req.CodTarea,
+                req.CodDetalle, req.Cantidad, req.CodUnidad, req.EsUnidad, req.Solicitado, req.Despacho,
+                req.Bodega, req.Incluir, req.Numero, req.Usuario, req.IdDispositivo, req.Tipo, req.Estado);
+            await db.SaveChangesAsync();
+            return Ok(req);
         }
 
         // PUT: api/GeneralViewFilter/5
