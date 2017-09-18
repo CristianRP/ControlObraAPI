@@ -6,7 +6,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>\\192.168.16.13\C$\inetpub\wwwroot\CFB_BUILD\CB_BUILD</_PublishTargetUrl>
+    <_PublishTargetUrl>F:\CB_BUILD</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Areas/HelpPage/HelpPage.css">
@@ -76,7 +76,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>02/22/2013 08:43:40</publishTime>
     </File>
     <File Include="bin/ControlObraAPI.dll">
-      <publishTime>08/01/2017 17:32:33</publishTime>
+      <publishTime>08/02/2017 09:35:30</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/02/2015 09:32:26</publishTime>
@@ -361,7 +361,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/17/2017 17:24:43</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/17/2017 17:39:51</publishTime>
+      <publishTime>08/02/2017 17:26:37</publishTime>
     </File>
   </ItemGroup>
 </Project>

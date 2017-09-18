@@ -79,6 +79,13 @@
             <Parameter Name="TIPO" Mode="In" Type="String" />
             <Parameter Name="ESTADO" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE3" ReturnType="Collection(CFB_BuildModel.VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE3_Result)">
+            <Parameter Name="TIPO_CONSULTA" Mode="In" Type="Int32" />
+            <Parameter Name="PARAMETRO1" Mode="In" Type="Int32" />
+            <Parameter Name="PARAMETRO2" Mode="In" Type="Int32" />
+            <Parameter Name="PARAMETRO3" Mode="In" Type="Int32" />
+            <Parameter Name="PARAMETRO4" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE_Result">
           <Property Type="String" Name="CODIGO" Nullable="true" MaxLength="90" />
@@ -103,25 +110,41 @@
           <Property Type="Int32" Name="COD_UNIDAD" Nullable="false" />
           <Property Type="String" Name="ES_UNIDAD" Nullable="false" MaxLength="3" />
         </ComplexType>
+        <ComplexType Name="VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE3_Result">
+          <Property Type="String" Name="CODIGO" Nullable="true" MaxLength="90" />
+          <Property Type="String" Name="NOMBRE" Nullable="false" MaxLength="40" />
+          <Property Type="Int32" Name="CANTIDAD" Nullable="false" />
+          <Property Type="String" Name="TIPO" Nullable="false" MaxLength="9" />
+          <Property Type="Int32" Name="COD_UNIDAD" Nullable="false" />
+          <Property Type="String" Name="ES_UNIDAD" Nullable="false" MaxLength="3" />
+          <Property Type="Int32" Name="SOLICITADO" Nullable="false" />
+          <Property Type="Int32" Name="DESPACHO" Nullable="false" />
+          <Property Type="Int32" Name="BODEGA" Nullable="false" />
+          <Property Type="String" Name="INCLUIR" Nullable="false" MaxLength="3" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="CFB_BuildModelStoreContainer" CdmEntityContainer="CFB_BuildEntities" >
-          <FunctionImportMapping FunctionImportName="VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE2" FunctionName="CFB_BuildModel.Store.VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE">
+          <FunctionImportMapping FunctionImportName="INSERT_PREREQ" FunctionName="CFB_BuildModel.Store.INSERT_PREREQ" />
+          <FunctionImportMapping FunctionImportName="VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE3" FunctionName="CFB_BuildModel.Store.VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="CFB_BuildModel.VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE2_Result">
+              <ComplexTypeMapping TypeName="CFB_BuildModel.VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE3_Result">
                 <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
                 <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
                 <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
                 <ScalarProperty Name="TIPO" ColumnName="TIPO" />
                 <ScalarProperty Name="COD_UNIDAD" ColumnName="COD_UNIDAD" />
                 <ScalarProperty Name="ES_UNIDAD" ColumnName="ES_UNIDAD" />
+                <ScalarProperty Name="SOLICITADO" ColumnName="SOLICITADO" />
+                <ScalarProperty Name="DESPACHO" ColumnName="DESPACHO" />
+                <ScalarProperty Name="BODEGA" ColumnName="BODEGA" />
+                <ScalarProperty Name="INCLUIR" ColumnName="INCLUIR" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="INSERT_PREREQ" FunctionName="CFB_BuildModel.Store.INSERT_PREREQ" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

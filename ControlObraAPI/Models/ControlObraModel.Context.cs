@@ -179,5 +179,30 @@ namespace ControlObraAPI.Models
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("INSERT_PREREQ", cOD_PROYECTOParameter, cOD_MODELOParameter, cOD_LOTEParameter, cOD_ACTIVIDADParameter, cOD_TAREAParameter, cOD_DETALLEParameter, cANTIDADParameter, cOD_UNIDADParameter, eS_UNIDADParameter, sOLICITADOParameter, dESPACHOParameter, bODEGAParameter, iNCLUIRParameter, nUMEROParameter, uSUARIOParameter, iDDISPOSITIVOParameter, tIPOParameter, eSTADOParameter);
         }
+    
+        public virtual ObjectResult<VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE3_Result> VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE3(Nullable<int> tIPO_CONSULTA, Nullable<int> pARAMETRO1, Nullable<int> pARAMETRO2, Nullable<int> pARAMETRO3, Nullable<int> pARAMETRO4)
+        {
+            var tIPO_CONSULTAParameter = tIPO_CONSULTA.HasValue ?
+                new ObjectParameter("TIPO_CONSULTA", tIPO_CONSULTA) :
+                new ObjectParameter("TIPO_CONSULTA", typeof(int));
+    
+            var pARAMETRO1Parameter = pARAMETRO1.HasValue ?
+                new ObjectParameter("PARAMETRO1", pARAMETRO1) :
+                new ObjectParameter("PARAMETRO1", typeof(int));
+    
+            var pARAMETRO2Parameter = pARAMETRO2.HasValue ?
+                new ObjectParameter("PARAMETRO2", pARAMETRO2) :
+                new ObjectParameter("PARAMETRO2", typeof(int));
+    
+            var pARAMETRO3Parameter = pARAMETRO3.HasValue ?
+                new ObjectParameter("PARAMETRO3", pARAMETRO3) :
+                new ObjectParameter("PARAMETRO3", typeof(int));
+    
+            var pARAMETRO4Parameter = pARAMETRO4.HasValue ?
+                new ObjectParameter("PARAMETRO4", pARAMETRO4) :
+                new ObjectParameter("PARAMETRO4", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE3_Result>("VISTA_PROYECTO_MODELO_OBRA_ACTIVIDAD_TAREA_DETALLE3", tIPO_CONSULTAParameter, pARAMETRO1Parameter, pARAMETRO2Parameter, pARAMETRO3Parameter, pARAMETRO4Parameter);
+        }
     }
 }
